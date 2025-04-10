@@ -1,20 +1,19 @@
-# Using String Module for easier calls of alphabet and punctuation
+
 import string 
 
-# define function and add arguments
+
 def encode (input_text, shift):
-    # make the list of lowercase letters
+
     alphabet = list(string.ascii_lowercase)
 
-    # created a string with no text
     encoded_text = ""
-    # Iterate through each character in input_text using for loop
+
     for char in input_text:
-        if char.isalpha(): # this will help check if the input are letters
+        if char.isalpha(): 
 
             char = char.lower()
 
-            #
+            
             old_index = alphabet.index(char)
             new_index = (old_index + shift) % 26
 
@@ -97,7 +96,7 @@ class SavingsAccount(BankAccount):
 
     def withdraw(self, amount):
         if (date.today() - self.creation_date).days < 100:
-            print("Withdrawls are only permitted after the account has been in existance for 180 days.")
+            print("Withdrawls are only allowed after the account has been in existance for 180 days.")
             return
         
         if amount > self.balance:
